@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>User Knowledge Modeling</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'>User Knowledge Modeling</span></h2>
+            <div class='description'>
+    			<p2>A Machine Learning Web App that classifies the knowledge level of a student, Built with Flask</p2>
+    		</div>
+    	</div>
+        <!-- Classification Area -->
+        <div class="Classification-area">
+			
+            <div class='div2'>
+                <form action="{{ url_for('classify') }}" onsubmit="myFunction()" method="POST">
+                    The degree of study time for goal object materials: <input class="form-input" type="text" name="STG" placeholder="Enter STG, eg. 0.75"><br>
+                    The degree of repetition number of user for goal object materials: <input class="form-input" type="text" name="SCG" placeholder="Enter SCG, eg. 0.50"><br>
+                    The degree of study time of user for related objects with goal object: <input class="form-input" type="text" name="STR" placeholder="Enter STR, eg. 0.20"><br>
+                    The exam performance of user for related objects with goal object: <input class="form-input" type="text" name="LPR" placeholder="Enter LPR, eg. 0.30"><br>
+                    The exam performance of user for goal objects: <input class="form-input" type="text" name="PEG" placeholder="Enter PEG, eg. 0.28"><br>
+
+			        <input type="submit" class="myButton" value="Classify UNS">
+				
+				</form>
+				<script>
+                    function myFunction() {
+                    alert("The knowledge level of user is: {{my_classification}}");}
+                </script>
+            </div>               
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/Harshal131"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/harshal-vakharia-23b078162/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with passion for Machine Learning by Harshal Vakharia.</p>
+       </div>
+
+    </body>
+</html>
