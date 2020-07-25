@@ -6,7 +6,7 @@
  
  * Classified and compared results using Logistic Regression, Stochastic Gradient Descent, K Nearest Neighbor, Decision Tree, Support Vector Classification
  
- * Optimized KNeighborsClassifier, Support Vector Classifier using GridSearchCV and DecisionTreeClassifier using RandomizedSearchCV
+ * Optimized KNeighbors Classifier, Support Vector Classifier using GridSearchCV and Decision Tree Classifier using RandomizedSearchCV
  
  * Built an API using flask
  
